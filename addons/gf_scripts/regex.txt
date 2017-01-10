@@ -1,0 +1,14 @@
+(removeAllWeapons.([^;]*)[\s\S]*?)(comment "Exported[^;]*.)
+ersetzen mit
+CheckUnitLoadoutSetThis($2,\n$1)\n$3
+
+Suchmodus Reguläre Ausdrücke
+text muss das comment "Exported by Arsenal" am ende des loadouts haben
+Das letzte loadout in der datei hat das meistens nicht also musste das da noch ranpappen
+und dann
+\[(.*),(.*)\] call bis_fnc_setUnitInsignia;
+ersetzen mit
+SetThisUnitInsignia($1)
+
+
+fertig... Wenn du die loadouts vom arsenal exportierst musst du nur bei der ersten removeallWeapons zeile das _this durch den spielernamen ersetzen... dann das ersetzen drüber und fertig
