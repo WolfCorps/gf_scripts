@@ -58,7 +58,7 @@ if sys.platform == "win32":
     import winreg
 
 ######## GLOBALS #########
-project = "@task_force_radio"
+project = "@gf_scripts"
 project_version = "1.0.0"
 arma3tools_path = ""
 work_drive = ""
@@ -67,14 +67,14 @@ make_root = ""
 release_dir = ""
 module_root_parent = ""
 optionals_root = ""
-key_name = "tfar"
+key_name = "gf_scripts"
 key = ""
 dssignfile = ""
-prefix = "tfar"
-pbo_name_prefix = "tfar_"
+prefix = "gf_scripts"
+pbo_name_prefix = "gf_"
 signature_blacklist = []
-importantFiles = ["mod.cpp", "README.md", "CONTRIBUTORS.md", "LICENSE.md", "manw_winner_addon_1st_emblem.paa", "task_force_arrowhead_logo.paa", "meta.cpp"]
-versionFiles = ["README.md", "mod.cpp"]
+importantFiles = []
+versionFiles = []
 
 ciBuild = False # Used for CI builds
 
@@ -531,7 +531,7 @@ def get_project_version():
     #do the magic based on https://github.com/acemod/ACE3/issues/806#issuecomment-95639048
 
     try:
-        scriptModPath = os.path.join(work_drive, prefix, "core\script_mod.hpp")
+        scriptModPath = os.path.join(work_drive, prefix, "gf_scripts\script_mod.hpp")
 
         if os.path.isfile(scriptModPath):
             f = open(scriptModPath, "r")
