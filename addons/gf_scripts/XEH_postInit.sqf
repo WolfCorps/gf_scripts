@@ -12,8 +12,6 @@
 
     mcc_missionmaker = (name _target);
     mcc_loginmissionmaker = true;
-
-    ["TFAR_RadioRequestResponseEvent", [_response], _player] call CBA_fnc_targetEvent;
 }] call CBA_fnc_addEventHandler;
 
 
@@ -26,6 +24,4 @@ if (!isServer and !isDedicated) exitWith {};
     params ["_target","_causer"];
     [_target,_causer] call GF_fnc_p_makeUnitCurator;
 
-
-    ["TFAR_RadioRequestResponseEvent", [_response], _player] call CBA_fnc_targetEvent;
 }] call CBA_fnc_addEventHandler;

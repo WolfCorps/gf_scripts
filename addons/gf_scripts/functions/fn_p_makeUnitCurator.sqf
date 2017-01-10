@@ -12,6 +12,7 @@ if (_targetPlayer getVariable ["dedmenfnc_HasCurator",false]) then {
 };
 
 if (_onlyDelete) exitWith {};
+private _curator = objNull;
 
 if (!(_targetPlayer getVariable ["dedmenfnc_HasCurator",false])) then {
     [format["Creating Curator for Player %1",_targetPlayer],_executor] call GF_fnc_outputToSystemChat;
@@ -50,8 +51,8 @@ if (!(_targetPlayer getVariable ["dedmenfnc_HasCurator",false])) then {
 
     _targetPlayer setVariable ["dedmenfnc_Curator",_curator];
     _targetPlayer setVariable ["dedmenfnc_HasCurator",true];
-
-
+} else {
+    _curator = _targetPlayer getVariable ["dedmenfnc_Curator"];
 };
 
 unassignCurator _curator;

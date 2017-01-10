@@ -1,7 +1,4 @@
-params ["_block","_player"]
-
-_block = param [0, false, [false]];
-_player = param [1, objNull, [objNull,""]];
+params ["_block","_player"];
 
 if (isNil "GF_HandcuffFunctionReplaced") then {
 	if (_block) then {

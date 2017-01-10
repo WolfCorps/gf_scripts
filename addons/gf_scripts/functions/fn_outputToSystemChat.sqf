@@ -2,4 +2,4 @@
 
 params ["_message","_target"];
 
-["GF_SystemChat", [_message, _target] call CBA_fnc_targetEvent;
+["GF_SystemChat", [_message], _target] call CBA_fnc_targetEvent;
