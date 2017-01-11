@@ -64,6 +64,7 @@ switch _mode do {
                 _unit = missionNamespace getVariable ["GF_musicModuleMusicUnit", objNull];
                 _unit setVariable ["RscAttributeMusic",_music];
                 //diag_log ["selection",_unit,_music];
+                ["GF_RscAttributeMusic", _music] call CBA_fnc_localEvent;
 				playMusic _music;
 				RscAttributeMusic_selected = _cursel;
 			};

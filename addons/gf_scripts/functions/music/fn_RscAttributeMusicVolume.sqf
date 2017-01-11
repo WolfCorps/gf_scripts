@@ -11,6 +11,18 @@ switch _mode do {
         //diag_log ["GF","MusicSkipper","RscAttribute",_ctrlSlider,_display];
         _ctrlSlider ctrladdeventhandler ["sliderposchanged","['sliderPosChanged',_this,objnull] call GF_fnc_RscAttributeMusicVolume;"];
         //diag_log ["GF","MusicSkipper","onLoad"];
+
+        ["GF_RscAttributeMusic", {
+            systemChat str _thisArgs;
+            if (_this == "del") exitWith {
+                diag_log "delteEH";
+                [_thisType, _thisId] call CBA_fnc_removeEventHandler;
+            }
+
+            _thisArgs slidersetposition 0;
+            _thisArgs sliderSetRange [0,getNumber (configFile >> "CfgMusic" >> _this >> "duration")];
+        }, _ctrlSlider] call CBA_fnc_addEventHandlerArgs;
+
     };
     case "confirmed": {
     	_display = _params select 0;
@@ -19,6 +31,7 @@ switch _mode do {
         //diag_log ["GF","MusicSkipper","confirmed"];
     	playMusic "";
         missionNamespace setVariable ["GF_musicModuleMusicUnit", nil];
+        ["GF_RscAttributeMusic", "del"] call CBA_fnc_localEvent;
     };
     case "sliderPosChanged": {
 
