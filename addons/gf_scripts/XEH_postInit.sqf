@@ -22,6 +22,11 @@
     mcc_loginmissionmaker = true;
 }] call CBA_fnc_addEventHandler;
 
+["ace_weaponJammed", {
+    params ["_player","_weapon"];
+    if (!GF_disableUnjam) exitWith {};
+    [_player, _weapon, true] call ace_overheating_fnc_clearJam;
+}] call CBA_fnc_addEventHandler;
 
 
 //Serveronly

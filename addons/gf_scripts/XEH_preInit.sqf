@@ -1,6 +1,6 @@
 if (isNil "GF_HandcuffLogTargets") then {GF_HandcuffLogTargets = [];};
 if (isNil "GF_MarkerLogTargets") then {GF_MarkerLogTargets = [];};
-
+GF_disableUnjam = false;
 //Serveronly
 if (!isServer and !isDedicated) exitWith {};
 
