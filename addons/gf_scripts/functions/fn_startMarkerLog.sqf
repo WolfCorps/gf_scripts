@@ -7,7 +7,7 @@ if (isDedicated) exitWith {};
 if (isNil "GF_markerLog_Initiated") then {
 	0 = 12 spawn GF_fnc_setMarkerEventHandlers;
 	0 = 53 spawn GF_fnc_setMarkerEventHandlers;
-	markerLog_Initiated = true;
+	GF_markerLog_Initiated = true;
 };
 
 private _setPVEH = false;
