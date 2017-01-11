@@ -17,7 +17,7 @@ switch _mode do {
             if (_this == "del") exitWith {
                 diag_log "delteEH";
                 [_thisType, _thisId] call CBA_fnc_removeEventHandler;
-            }
+            };
 
             _thisArgs slidersetposition 0;
             _thisArgs sliderSetRange [0,getNumber (configFile >> "CfgMusic" >> _this >> "duration")];
