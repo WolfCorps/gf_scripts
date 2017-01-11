@@ -1,6 +1,6 @@
 params ["_logic","_units","_activated"];
 
-diag_log ["GF","fn_moduleMusic",_this,_logic];
+//diag_log ["GF","fn_moduleMusic",_this,_logic];
 
 if (!_activated) exitWith {};
 missionNamespace setVariable ["GF_musicModuleMusicUnit", _logic];
@@ -23,7 +23,7 @@ switch true do {
 		_musicVolume = _logic getvariable ["RscAttributeMusicVolume",musicvolume];
 		_musicStart = _logic getvariable ["RscAttributeMusicSkipper",0];
 
-        diag_log ["GF","fn_moduleMusic start at",_music,_musicStart];
+        //diag_log ["GF","fn_moduleMusic start at",_music,_musicStart];
 		[[_music,_musicStart,_musicVolume],"bis_fnc_playmusic",_target + allcurators] call bis_fnc_mp;
 	};
 	case (_radio != ""): {

@@ -3,7 +3,7 @@
 _mode = _this select 0;
 _params = _this select 1;
 _unit = _this select 2;
-diag_log ["RscAttributeMusic",_this];
+//diag_log ["RscAttributeMusic",_this];
 switch _mode do {
 	case "onLoad": {
 		_display = _params select 0;
@@ -63,7 +63,7 @@ switch _mode do {
 				_music = _ctrlValue tvdata _cursel;
                 _unit = missionNamespace getVariable ["GF_musicModuleMusicUnit", objNull];
                 _unit setVariable ["RscAttributeMusic",_music];
-                diag_log ["selection",_unit,_music];
+                //diag_log ["selection",_unit,_music];
 				playMusic _music;
 				RscAttributeMusic_selected = _cursel;
 			};

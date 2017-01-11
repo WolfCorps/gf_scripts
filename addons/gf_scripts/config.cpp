@@ -136,7 +136,7 @@ class CfgFunctions {
 		};
 	};
 };
-
+/*
 class CfgRemoteExec {
 	class Functions {
 		mode = 1;
@@ -161,7 +161,7 @@ class CfgRemoteExec {
 		};
 	};
 };
-
+*/
 class CfgMods {
 	class Mod_Base;
 	class GF: Mod_Base {

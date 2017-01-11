@@ -2,7 +2,7 @@
 _mode = _this select 0;
 _params = _this select 1;
 _class = _this select 2;
-diag_log [__FILE__, "CALLED",_this];
+//diag_log [__FILE__, "CALLED",_this];
 switch _mode do {
 	case "onLoad": {
 
@@ -179,7 +179,7 @@ _params = _this select 1;
 
 switch _mode do {
 	case "onLoad": {
-		
+
 		_display = _params select 0;
 		_displayConfig = configfile >> "GF_RscDisplayAttributesModuleMusic";
 
@@ -307,26 +307,26 @@ switch _mode do {
 			_display closedisplay 2;
 		};
 	//};
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
+
+
+
+
+
+
+
+
+
+
+
+
+
 		_display = _params select 0;
 		_ctrlValue = _display displayctrl IDC_RSCATTRIBUTEMUSIC_VALUE;
 		_ctrlValue ctrladdeventhandler ["treeselchanged","['treeSelChanged',_this] call GF_fnc_musicDisplayFuncs;"];
 		_musicClasses = [];
 		_textRandom = format ["<%1>",localize "str_a3_bis_fnc_respawnmenuposition_random"];
 		tvClear  _display;
-		
+
 		{
 			_tvClass = _ctrlValue tvadd [[],gettext (_x >> "displayName")];
 			_musicClasses set [count _musicClasses,tolower configname _x];
@@ -361,13 +361,13 @@ switch _mode do {
 		_music = _ctrlValue tvdata tvcursel _ctrlValue;
 		_music remoteExec ["GF_fnc_playMusic",allPlayers];
 		// [-1, {}] call CBA_fnc_globalExecute;
-		
+
 		//_music call GF_fnc_playMusic;
-		
+
 		//playmusic _music;
-		
+
 		//#AddExecute
-		
+
 		//_unit setvariable ["RscAttributeMusic",_music,true];
 	};
 	case "canceled": {
