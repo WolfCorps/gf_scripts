@@ -38,6 +38,7 @@ class CfgFunctions {
             file = QPATHTOF(functions\ace);
             class finishUncon;
             class revive;
+            class disableStamina;
         };
         class Tools {
             file = QPATHTOF(functions\tools);
