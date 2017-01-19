@@ -18,9 +18,9 @@ if (!(_targetPlayer getVariable ["dedmenfnc_HasCurator",false])) then {
     [format["Creating Curator for Player %1",_targetPlayer],_executor] call GF_fnc_outputToSystemChat;
 
     if (isNil "GF_logicGroup") then {
-    	GF_logicGroup = creategroup sideLogic;
+        GF_logicGroup = creategroup sideLogic;
     };
-    _curator = GF_logicGroup createunit["ModuleCurator_F", [0, 90, 90], [], 0.5, "NONE"];	//Logic Server
+    _curator = GF_logicGroup createunit["ModuleCurator_F", [0, 90, 90], [], 0.5, "NONE"];    //Logic Server
     _curator setVariable ["showNotification",false];
 
     _curator addEventHandler ["CuratorObjectDoubleClicked", {_this spawn MCC_fnc_curatorInitLine}];
