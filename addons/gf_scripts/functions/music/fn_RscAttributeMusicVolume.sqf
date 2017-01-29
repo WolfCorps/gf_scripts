@@ -38,7 +38,7 @@ switch _mode do {
         //diag_log ["GF","MusicSkipper",_unit,_unit getvariable ["RscAttributeMusic",""],configFile >> "CfgMusic" >> (_unit getvariable ["RscAttributeMusic",""]) >> "duration"];
         //diag_log ["GF","MusicSkipper","sliderPosChanged",_unit getvariable ["RscAttributeMusic",""],getNumber (configFile >> "CfgMusic" >> (_unit getvariable ["RscAttributeMusic",""]) >> "duration")];
     	_ctrlSlider = _params select 0;
-    	_ctrlSlider sliderSetRange [0,getNumber (configFile >> "CfgMusic" >> (GF_musicModuleMusicUnit getvariable ["RscAttributeMusic",""]) >> "duration")];
+    	//_ctrlSlider sliderSetRange [0,getNumber (configFile >> "CfgMusic" >> (GF_musicModuleMusicUnit getvariable ["RscAttributeMusic",""]) >> "duration")];
     	playMusic [GF_musicModuleMusicUnit getvariable ["RscAttributeMusic",""], sliderposition _ctrlSlider];
     };
     case "onUnload": {
