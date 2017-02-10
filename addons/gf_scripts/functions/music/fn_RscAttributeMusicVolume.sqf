@@ -1,7 +1,7 @@
 #include "\A3\ui_f_curator\ui\defineResinclDesign.inc"
 //handles skipper
 params ["_mode","_params","_unit"];
-//diag_log ["GF","MusicSkipper","RscAttribute",_unit];
+diag_log ["GF","MusicSkipper","RscAttributeMusicVolume",_this];
 switch _mode do {
     case "onLoad": {
         _display = _params select 0;
@@ -13,9 +13,9 @@ switch _mode do {
         //diag_log ["GF","MusicSkipper","onLoad"];
 
         ["GF_RscAttributeMusic", {
-            systemChat str _thisArgs;
+            //systemChat str _thisArgs;
             if (_this == "del") exitWith {
-                diag_log "delteEH";
+                //diag_log "deleteEH";
                 [_thisType, _thisId] call CBA_fnc_removeEventHandler;
             };
 
@@ -30,7 +30,7 @@ switch _mode do {
     	_unit setvariable ["RscAttributeMusicSkipper",sliderposition _ctrlSlider,true];
         //diag_log ["GF","MusicSkipper","confirmed"];
     	playMusic "";
-        missionNamespace setVariable ["GF_musicModuleMusicUnit", nil];
+        missionNamespace setVariable ["BIS_fnc_initCuratorAttributes_target", nil];
         ["GF_RscAttributeMusic", "del"] call CBA_fnc_localEvent;
     };
     case "sliderPosChanged": {
@@ -39,7 +39,7 @@ switch _mode do {
         //diag_log ["GF","MusicSkipper","sliderPosChanged",_unit getvariable ["RscAttributeMusic",""],getNumber (configFile >> "CfgMusic" >> (_unit getvariable ["RscAttributeMusic",""]) >> "duration")];
     	_ctrlSlider = _params select 0;
     	//_ctrlSlider sliderSetRange [0,getNumber (configFile >> "CfgMusic" >> (GF_musicModuleMusicUnit getvariable ["RscAttributeMusic",""]) >> "duration")];
-    	playMusic [GF_musicModuleMusicUnit getvariable ["RscAttributeMusic",""], sliderposition _ctrlSlider];
+    	playMusic [BIS_fnc_initCuratorAttributes_target getvariable ["RscAttributeMusic",""], sliderposition _ctrlSlider];
     };
     case "onUnload": {
     	playMusic "";

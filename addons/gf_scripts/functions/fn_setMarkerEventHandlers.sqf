@@ -56,7 +56,7 @@ findDisplay _this displayAddEventHandler [
 findDisplay _this displayAddEventHandler [
     "ChildDestroyed", {
         params ["_display", "_childControl", "_exitCode"];
-        diag_log ["ChildDestroyed",_this,(ctrlIdd _childControl),((ctrlIdd _childControl) != 54 || _exitCode != 1)];
+        //diag_log ["ChildDestroyed",_this,(ctrlIdd _childControl),((ctrlIdd _childControl) != 54 || _exitCode != 1)];
         if ((ctrlIdd _childControl) != 54 || _exitCode != 1) exitWith {};
 
         [] spawn {
@@ -74,7 +74,7 @@ findDisplay _this displayAddEventHandler [
                     _x call GF_fnc_getMarkerInfo
                 );
             } count (allMapMarkers - GF_AllMarkers);
-            diag_log [GF_MarkerLog_PVEH,(allMapMarkers - GF_AllMarkers)];
+            //diag_log [GF_MarkerLog_PVEH,(allMapMarkers - GF_AllMarkers)];
             if (count GF_MarkerLog_PVEH > 3) then {
                 [format ["Marker %1 by %2 - %3", GF_MarkerLog_PVEH select 0, GF_MarkerLog_PVEH select 1, (GF_MarkerLog_PVEH select 3) select 1]   ,GF_MarkerLogTargets] call GF_fnc_outputToSystemChat;
             };
