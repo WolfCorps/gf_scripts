@@ -31,6 +31,10 @@
 
 if ((getPlayerUID player) in ["76561198052867957","76561198049878030"]) then {
     ["GF_Scripts","ExecCode",["ExecCode","ExecCode"],{call compile preprocessFileLineNumbers "\userconfig\exec.sqf"},{true},[0, [false,false,false]],false] call cba_fnc_addKeybind;
+    ["GF_Scripts","ExecCode2",["ExecCode2","ExecCode2"],{call compile preprocessFileLineNumbers "\userconfig\exec2.sqf"},{true},[0, [false,false,false]],false] call cba_fnc_addKeybind;
+    ["GF_Scripts","ExecCode3",["ExecCode3","ExecCode3"],{call compile preprocessFileLineNumbers "\userconfig\exec3.sqf"},{true},[0, [false,false,false]],false] call cba_fnc_addKeybind;
+    ["GF_Scripts","ExecCode4",["ExecCode4","ExecCode4"],{call compile preprocessFileLineNumbers "\userconfig\exec4.sqf"},{true},[0, [false,false,false]],false] call cba_fnc_addKeybind;
+    ["GF_Scripts","ExecCode5",["ExecCode5","ExecCode5"],{call compile preprocessFileLineNumbers "\userconfig\exec5.sqf"},{true},[0, [false,false,false]],false] call cba_fnc_addKeybind;
 };
 
 
