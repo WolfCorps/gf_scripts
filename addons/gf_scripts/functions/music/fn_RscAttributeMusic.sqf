@@ -37,7 +37,7 @@ switch _mode do {
         };
 
         _ctrlValue tvsetcursel (uinamespace getvariable ["RscAttributeMusic_selected",[]]);
-        _unit setvariable ["RscAttributeMusic",nil];
+        _unit setvariable ["RscAttributeMusic",""];
     };
     case "confirmed": {
         _display = _params select 0;
@@ -45,6 +45,7 @@ switch _mode do {
         _music = _ctrlValue tvdata tvcursel _ctrlValue;
         //playmusic _music;
         _unit setvariable ["RscAttributeMusic",_music,true];
+        GF_scripts_music_RscAttributeMusic = _music;
     };
     case "onUnload": {
         if (isnil {_unit getvariable "RscAttributeMusic"}) then {
@@ -62,7 +63,8 @@ switch _mode do {
             } else {
                 _music = _ctrlValue tvdata _cursel;
                 _unit = missionNamespace getVariable ["BIS_fnc_initCuratorAttributes_target", objNull];
-                _unit setVariable ["RscAttributeMusic",_music];
+                GF_scripts_music_Unit setVariable ["RscAttributeMusic",_music];
+                GF_scripts_music_RscAttributeMusic = _music;
                 //diag_log ["selection",_unit,_music];
                 ["GF_RscAttributeMusic", _music] call CBA_fnc_localEvent;
                 playMusic _music;

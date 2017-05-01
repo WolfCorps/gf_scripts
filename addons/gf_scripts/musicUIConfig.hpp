@@ -67,14 +67,14 @@ class CfgVehicles
 class RscControlsGroupNoScrollbars;
 class RscAttributeMusicSkipper: RscControlsGroupNoScrollbars {
 	onSetFocus = "[_this,""fn_RscAttributeMusicVolume"",'CuratorGF'] call (uinamespace getvariable ""BIS_fnc_initCuratorAttribute"")";
-	idc = 28956;
+	idc = 23956;
 	x = "7 * 			(			((safezoneW / safezoneH) min 1.2) / 40) + 			(safezoneX)";
 	y = "10 * 			(			(			((safezoneW / safezoneH) min 1.2) / 1.2) / 25) + 			(safezoneY + safezoneH - 			(			((safezoneW / safezoneH) min 1.2) / 1.2))";
 	w = "26 * 			(			((safezoneW / safezoneH) min 1.2) / 40)";
 	h = "1 * 			(			(			((safezoneW / safezoneH) min 1.2) / 1.2) / 25)";
 	class controls {
 		class Title: RscText {
-			idc = 27656;
+			idc = 23656;
 			text = "$STR_A3_RscAttributeMusicVolume_Title";
 			x = "0 * 			(			((safezoneW / safezoneH) min 1.2) / 40)";
 			y = "0 * 			(			(			((safezoneW / safezoneH) min 1.2) / 1.2) / 25)";
@@ -108,7 +108,7 @@ class RscDisplayAttributesModuleMusic_GF: RscDisplayAttributes
 		class Content: Content
 		{
 			class Controls: controls {
-				class Owners: RscAttributeOwners{};
+				//class Owners: RscAttributeOwners{};
 				class Music: RscAttributeMusic  {
                 	onSetFocus = "[_this,""fn_RscAttributeMusic"",'CuratorGF'] call (uinamespace getvariable ""BIS_fnc_initCuratorAttribute"")";
                 };

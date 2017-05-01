@@ -22,16 +22,23 @@ switch _mode do {
             _thisArgs slidersetposition 0;
             _thisArgs sliderSetRange [0,getNumber (configFile >> "CfgMusic" >> _this >> "duration")];
         }, _ctrlSlider] call CBA_fnc_addEventHandlerArgs;
-
+        GF_scripts_music_Unit = _unit;
     };
     case "confirmed": {
     	_display = _params select 0;
     	_ctrlSlider = _display displayctrl 13375;
-    	_unit setvariable ["RscAttributeMusicSkipper",sliderposition _ctrlSlider,true];
+    	GF_scripts_music_Unit setvariable ["RscAttributeMusicSkipper",sliderposition _ctrlSlider,true];
         //diag_log ["GF","MusicSkipper","confirmed"];
     	playMusic "";
-        missionNamespace setVariable ["BIS_fnc_initCuratorAttributes_target", nil];
+        //missionNamespace setVariable ["BIS_fnc_initCuratorAttributes_target", nil];
         ["GF_RscAttributeMusic", "del"] call CBA_fnc_localEvent;
+        private _music = missionNamespace getVariable ["GF_scripts_music_RscAttributeMusic",""];
+        GF_scripts_music_Unit setVariable ["RscAttributeMusic",""]; // out fn_moduleMusic override doesn't work. So this keeps the BIS one from working
+        private _volume = GF_scripts_music_Unit getVariable ["RscAttributeMusicVolume",musicvolume];
+        diag_log ["PLAY",[_music, sliderposition _ctrlSlider, _volume]];
+        //private _target = GF_scripts_music_Unit getvariable ["RscAttributeOwners",[_side]];
+        [[_music, sliderposition _ctrlSlider, _volume], "bis_fnc_playmusic", allPlayers] call bis_fnc_mp;
+
     };
     case "sliderPosChanged": {
 
@@ -39,7 +46,8 @@ switch _mode do {
         //diag_log ["GF","MusicSkipper","sliderPosChanged",_unit getvariable ["RscAttributeMusic",""],getNumber (configFile >> "CfgMusic" >> (_unit getvariable ["RscAttributeMusic",""]) >> "duration")];
     	_ctrlSlider = _params select 0;
     	//_ctrlSlider sliderSetRange [0,getNumber (configFile >> "CfgMusic" >> (GF_musicModuleMusicUnit getvariable ["RscAttributeMusic",""]) >> "duration")];
-    	playMusic [BIS_fnc_initCuratorAttributes_target getvariable ["RscAttributeMusic",""], sliderposition _ctrlSlider];
+        GF_scripts_music_Unit setvariable ["RscAttributeMusicSkipper",sliderposition _ctrlSlider,true];
+    	playMusic [missionNamespace getVariable ["GF_scripts_music_RscAttributeMusic",""], sliderposition _ctrlSlider];
     };
     case "onUnload": {
     	playMusic "";

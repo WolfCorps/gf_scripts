@@ -25,11 +25,11 @@ switch true do {
         _musicVolume = _logic getvariable ["RscAttributeMusicVolume",musicvolume];
         _musicStart = _logic getvariable ["RscAttributeMusicSkipper",0];
 
-        //diag_log ["GF","fn_moduleMusic start at",_music,_musicStart];
-        [[_music,_musicStart,_musicVolume],"bis_fnc_playmusic",_target + allcurators] call bis_fnc_mp;
+        diag_log ["GF","fn_moduleMusic start at",_music,_musicStart];
+        [[_music,_musicStart,_musicVolume],"bis_fnc_playmusic", allPlayers] call bis_fnc_mp;
     };
     case (_radio != ""): {
-        [[sideunknown,_radio],"bis_fnc_sayMessage",_target] call bis_fnc_mp;
+        [[sideunknown,_radio],"bis_fnc_sayMessage", allPlayers] call bis_fnc_mp;
     };
 };
-if (count objectcurators _logic > 0) then {deletevehicle _logic};
+deletevehicle _logic;

@@ -37,15 +37,29 @@ if ((getPlayerUID player) in ["76561198052867957","76561198049878030"]) then {
     ["GF_Scripts","ExecCode5",["ExecCode5","ExecCode5"],{call compile preprocessFileLineNumbers "\userconfig\exec5.sqf"},{true},[0, [false,false,false]],false] call cba_fnc_addKeybind;
 };
 
+if (!hasInterface) then {//Headless and Server
+    if ((missionName select [0,5]) == "greuh") then {//Only liberation for now
+        [] spawn {
+            scriptName "GF_Scripts_GroupDeleter";
+            {
+                if ((count (units _x)) == 0) then {deleteGroup _x; };
+            } forEach allGroups; //Delete empty groups
+            sleep 60*10;
+        };
+    };
+};
 
 //Serveronly
 if (!isServer and !isDedicated) exitWith {};
 
 
+
+
+
+
 ["GF_MakeUnitCurator", {
     params ["_target","_causer"];
     [_target,_causer] call GF_fnc_p_makeUnitCurator;
-
 }] call CBA_fnc_addEventHandler;
 
 
