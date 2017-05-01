@@ -3,7 +3,8 @@
 
 
 ["GF_AddonCheck", {
-    private _AA = "(toLower (configName _x)) find ""a3"" != 0" configClasses (configFile >> "CfgPatches"); private _configs = _AA apply {configName _x} ; //bux
+    private _AA = "(toLower (configName _x)) find ""a3"" != 0" configClasses (configFile >> "CfgPatches");
+	private _configs = _AA apply {configName _x} ; //bux
     //_configs = ("true" configClasses (configFile >> "CfgPatches")) apply {configName _x};//#Commy2   old: "true" configClasses (configFile >> "CfgPatches");
 
     ["GF_AddonCheckServer", [_configs, name player]] call CBA_fnc_serverEvent;
@@ -49,6 +50,15 @@ if (!hasInterface) then {//Headless and Server
     };
 };
 
+if (hasInterface) then { //client only
+	if ((toLower missionName) find "zeus" == -1) then {//Not in Zeus
+		diag_log ["gf_scripts","Disabling medical ai statemachine"];
+		[ace_medical_ai_statemachine] call CBA_statemachine_fnc_delete;
+	};
+};
+
+
+
 //Serveronly
 if (!isServer and !isDedicated) exitWith {};
 
@@ -67,7 +77,8 @@ if (!isServer and !isDedicated) exitWith {};
 ["GF_AddonCheckServer", {
     params ["_configs","_playername"];
 
-    private _AA = "(toLower (configName _x)) find ""a3"" != 0" configClasses (configFile >> "CfgPatches"); private _serverConfigs = _AA apply {configName _x} ; //bux
+    private _AA = "(toLower (configName _x)) find ""a3"" != 0" configClasses (configFile >> "CfgPatches");
+	private _serverConfigs = _AA apply {configName _x} ; //bux
     //_configs = ("true" configClasses (configFile >> "CfgPatches")) apply {configName _x};//#Commy2   old: "true" configClasses (configFile >> "CfgPatches");
 
     _trimmedConfigs = _configs - _serverConfigs;
