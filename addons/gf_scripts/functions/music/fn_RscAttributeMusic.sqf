@@ -52,8 +52,8 @@ switch _mode do {
 
         diag_log ["GF","RscAttributeMusic start at",_music,_musicStart];
 		[-1, {
-			params ["_music","_offset","_volume"];
-			systemChat str ["Playing",_this];
+			params ["_music", ["_offset",0,[0]], ["_volume",1,[0]]];
+			//systemChat str ["Playing",_this];
 			diag_log ["Playing",_this];
 			0 fademusic _volume;
 			playmusic [_music,_offset];

@@ -38,8 +38,8 @@ switch _mode do {
         diag_log ["PLAY",[_music, sliderposition _ctrlSlider, _volume]];
         //private _target = GF_scripts_music_Unit getvariable ["RscAttributeOwners",[_side]];
 		[-1, {
-			params ["_music","_offset","_volume"];
-			systemChat str ["Playing",_this];
+			params ["_music", ["_offset",0,[0]], ["_volume",1,[0]]];
+			//systemChat str ["Playing",_this];
 			diag_log ["Playing",_this];
 			0 fademusic _volume;
 			playmusic [_music,_offset];
