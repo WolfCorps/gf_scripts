@@ -46,6 +46,19 @@ switch _mode do {
         //playmusic _music;
         _unit setvariable ["RscAttributeMusic",_music,true];
         GF_scripts_music_RscAttributeMusic = _music;
+		
+		_musicVolume = _logic getvariable ["RscAttributeMusicVolume",musicvolume];
+        _musicStart = _logic getvariable ["RscAttributeMusicSkipper",0];
+
+        diag_log ["GF","RscAttributeMusic start at",_music,_musicStart];
+		[-1, {
+			params ["_music","_offset","_volume"];
+			systemChat str ["Playing",_this];
+			diag_log ["Playing",_this];
+			0 fademusic _volume;
+			playmusic [_music,_offset];
+		},[_music, _musicStart, _musicVolume]] call CBA_fnc_globalExecute;		
+		
     };
     case "onUnload": {
         if (isnil {_unit getvariable "RscAttributeMusic"}) then {

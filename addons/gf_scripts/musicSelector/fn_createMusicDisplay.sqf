@@ -3,7 +3,7 @@
 //diag_log __FILE__;
 //systemChat str (__FILE__);
 //hint str (__FILE__);
-_isSteamIdAllowed = ((getPlayerUID player) in ["76561198049878030","76561198052867957","76561198100544071"]);
+_isSteamIdAllowed = ((getPlayerUID player) in ["76561198049878030","76561198052867957","76561198100544071","76561198042783650"]);
 _isPlayerMCC = (mcc_missionmaker == (name player));
 _isPlayerZeus = ((getAssignedCuratorLogic player) != objNull);
 if (_isPlayerMCC || _isPlayerZeus || _isSteamIdAllowed) then {

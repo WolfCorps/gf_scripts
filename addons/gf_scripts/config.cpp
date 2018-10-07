@@ -6,9 +6,12 @@ class CfgPatches {
         weapons[] = {};
         requiredVersion = 1.0;
         author = "dedmen";
-        requiredAddons[] = {"cba_main","A3_Modules_F_Curator"};
+        requiredAddons[] = {"cba_main","A3_Modules_F_Curator","ace_medical_blood"};
     };
 };
+EnableTargetDebug = 1;
+
+
 class Extended_PreInit_EventHandlers {
     class gf_scripts {
         init = "call compile preProcessFileLineNumbers '\z\gf_scripts\addons\gf_scripts\XEH_preInit.sqf'";
@@ -30,6 +33,14 @@ class RscDisplayFunctionsViewer {
     onUnload = "[""onUnload"",_this,""RscDisplayFunctionsViewer"",'GFovr'] call  (uinamespace getvariable 'BIS_fnc_initDisplay')";
     scriptPath = "GFovr";
 };
+
+
+class ACE_Settings {
+    class ace_medical_blood_enabledFor {
+        value = 1;
+    };
+};
+
 
 class CfgFunctions {
     class GF {
@@ -59,6 +70,8 @@ class CfgFunctions {
             class removeUnitCurator;
             class p_makeUnitCurator;
             class outputToSystemChat;
+            class performanceMode;
+            class screenShotMode;
         };
         class showImage {
             file = QPATHTOF(functions\showImage);
@@ -80,6 +93,7 @@ class CfgFunctions {
             class moduleMusic;
             class RscAttributeMusicVolume;
             class RscAttributeMusic;
+			class playModuleMusic;
         };
         class Inits {
             file = QPATHTOF(functions);

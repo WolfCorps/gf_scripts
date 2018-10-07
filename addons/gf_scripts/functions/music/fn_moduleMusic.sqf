@@ -19,14 +19,17 @@ _radio = _logic getvariable ["RscAttributeRadio",""];
 
 switch true do {
     case (_sound != ""): {
-        [_sound,"bis_fnc_playsound",_target] call bis_fnc_mp;
+        _sound remoteExec ["bis_fnc_playmusic", -2];
     };
     case (_music != ""): {
         _musicVolume = _logic getvariable ["RscAttributeMusicVolume",musicvolume];
         _musicStart = _logic getvariable ["RscAttributeMusicSkipper",0];
 
         diag_log ["GF","fn_moduleMusic start at",_music,_musicStart];
-        [[_music,_musicStart,_musicVolume],"bis_fnc_playmusic", allPlayers] call bis_fnc_mp;
+		[-1, {
+			_this call GF_fnc_playMusic;
+		},[_music, _musicStart, _volume]] call CBA_fnc_globalExecute;
+		//[_music,_musicStart,_musicVolume] remoteExec ["bis_fnc_playmusic", -2];
     };
     case (_radio != ""): {
         [[sideunknown,_radio],"bis_fnc_sayMessage", allPlayers] call bis_fnc_mp;

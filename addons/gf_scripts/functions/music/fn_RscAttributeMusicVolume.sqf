@@ -37,7 +37,14 @@ switch _mode do {
         private _volume = GF_scripts_music_Unit getVariable ["RscAttributeMusicVolume",musicvolume];
         diag_log ["PLAY",[_music, sliderposition _ctrlSlider, _volume]];
         //private _target = GF_scripts_music_Unit getvariable ["RscAttributeOwners",[_side]];
-        [[_music, sliderposition _ctrlSlider, _volume], "bis_fnc_playmusic", allPlayers] call bis_fnc_mp;
+		[-1, {
+			params ["_music","_offset","_volume"];
+			systemChat str ["Playing",_this];
+			diag_log ["Playing",_this];
+			0 fademusic _volume;
+			playmusic [_music,_offset];
+		},[_music, sliderposition _ctrlSlider, _volume]] call CBA_fnc_globalExecute;
+		//[_music, sliderposition _ctrlSlider, _volume] remoteExec ["bis_fnc_playmusic",-2];
 
     };
     case "sliderPosChanged": {
