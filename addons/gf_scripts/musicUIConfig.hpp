@@ -1,12 +1,12 @@
 
 class RscDisplayAttributes {
-	class ControlsBackground { };
+	class ControlsBackground;
 	class Controls {
 		class Background;
 		class Title;
 		class ButtonOK;
 		class ButtonCancel;
-		class Content{class Controls;};
+		class Content;
 	};
 };
 class Controls;
@@ -23,13 +23,13 @@ class ButtonCancel;
 class GF_RscDisplayAttributesModuleMusic: RscDisplayAttributes {
 	onLoad = "[""onLoad"",_this] call GF_fnc_musicDisplayFuncs;";
 	onUnload = "[""onUnload"",_this] call GF_fnc_musicDisplayFuncs;";
-	class Controls: Controls {
-		class Background: Background{};
-		class Title: Title{};
+	class Controls {
+		//class Background: Background{};
+		//class Title: Title{};
 		class Content: Content {
 			x = 0;
 			y = 0;
-			class Controls: controls {
+			class controls {
 				x = 0;
 				y = 0;
 				class Music: RscAttributeMusic {
