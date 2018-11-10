@@ -1,3 +1,7 @@
+#include "script_component.hpp"
+#include "XEH_PREP.sqf"
+
+
 if (isNil "GF_HandcuffLogTargets") then {GF_HandcuffLogTargets = [];};
 if (isNil "GF_MarkerLogTargets") then {GF_MarkerLogTargets = [];};
 GF_disableUnjam = false;

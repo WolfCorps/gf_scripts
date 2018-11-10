@@ -6,7 +6,7 @@ class CfgPatches {
         weapons[] = {};
         requiredVersion = 1.0;
         author = "dedmen";
-        requiredAddons[] = {"cba_main","A3_Modules_F_Curator","ace_medical_blood"};
+        requiredAddons[] = {"cba_main","A3_Modules_F_Curator","ace_medical_blood","ace_cargo"};
     };
 };
 EnableTargetDebug = 1;
@@ -22,6 +22,17 @@ class Extended_PostInit_EventHandlers {
         init = "call compile preProcessFileLineNumbers '\z\gf_scripts\addons\gf_scripts\XEH_postInit.sqf'";
     };
 };
+
+
+class Extended_Init_EventHandlers {
+    class UGV_01_base_F {
+        class gf_scripts_stomperSlingloadableMass {
+            init = "_this setMass 2900";
+        };
+    };
+};
+
+
 
 class cfgScriptPaths {
     GFovr = QPATHTOF(functions\hack\);
@@ -168,3 +179,27 @@ class CfgMods {
 };
 
 #include "musicUIConfig.hpp"
+
+
+class CfgVehicles {
+	
+	class ModuleSound_F;
+	class ModuleMusic_F: ModuleSound_F {
+		author = "Dedmen";
+		_generalMacro = "ModuleMusic_F";
+		displayName = "GF Musik";
+		portrait = "\a3\Modules_F_Curator\Data\portraitMusic_ca.paa";
+		curatorInfoType = "RscDisplayAttributesModuleMusic_GF";
+		function = "GF_fnc_moduleMusic";
+	};
+
+	
+	
+	class Car_F;
+	class Quadbike_01_base_F: Car_F {
+		ace_cargo_size = 4;
+		ace_cargo_space = 4;
+		ace_cargo_hasCargo = 1;
+		ace_cargo_canLoad = 1;
+	};
+};

@@ -48,22 +48,6 @@ class GF_RscDisplayAttributesModuleMusic: RscDisplayAttributes {
 	};
 };
 
-
-class CfgVehicles
-{
-	class ModuleSound_F;
-	class ModuleMusic_F: ModuleSound_F {
-		author = "Dedmen";
-		_generalMacro = "ModuleMusic_F";
-		displayName = "GF Musik";
-		portrait = "\a3\Modules_F_Curator\Data\portraitMusic_ca.paa";
-		curatorInfoType = "RscDisplayAttributesModuleMusic_GF";
-		function = "GF_fnc_moduleMusic";
-	};
-
-
-};
-
 class RscControlsGroupNoScrollbars;
 class RscAttributeMusicSkipper: RscControlsGroupNoScrollbars {
 	onSetFocus = "[_this,""fn_RscAttributeMusicVolume"",'CuratorGF'] call (uinamespace getvariable ""BIS_fnc_initCuratorAttribute"")";
