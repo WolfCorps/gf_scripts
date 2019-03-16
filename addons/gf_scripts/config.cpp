@@ -83,6 +83,7 @@ class CfgFunctions {
             class outputToSystemChat;
             class performanceMode;
             class screenShotMode;
+            class initTeleporter;
         };
         class showImage {
             file = QPATHTOF(functions\showImage);
