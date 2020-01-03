@@ -49,15 +49,15 @@ if (!hasInterface) then {//Headless and Server
     };
 };
 
-if (hasInterface) then { //client only
-	if ((toLower missionName) find "zeus" == -1) then {//Not in Zeus
-		diag_log ["gf_scripts","Disabling medical ai statemachine"];
-			[
-                {!isNil "ace_medical_ai_statemachine"},
-                {[ace_medical_ai_statemachine] call CBA_statemachine_fnc_delete;}
-            ] call CBA_fnc_waitUntilAndExecute;		
-	};
-};
+//if (hasInterface) then { //client only
+//	if ((toLower missionName) find "zeus" == -1) then {//Not in Zeus
+//		diag_log ["gf_scripts","Disabling medical ai statemachine"];
+//			[
+//                {!isNil "ace_medical_ai_statemachine"},
+//                {[ace_medical_ai_statemachine] call CBA_statemachine_fnc_delete;}
+//            ] call CBA_fnc_waitUntilAndExecute;		
+//	};
+//};
 
 
 if (isNil "ace_arsenal_fnc_addDefaultLoadout") then {
