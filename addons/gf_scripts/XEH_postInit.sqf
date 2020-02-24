@@ -417,7 +417,114 @@ if (isClass (configFile >> "CfgPatches" >> "bwa3_common")) then {
 ] call ace_arsenal_fnc_addDefaultLoadout;
 
 
-
+    [
+	"USMC Desert Rifleman",
+	[["rhs_weap_m4","rhsusf_acc_SFMB556","","rhsusf_acc_eotech_552",["rhs_mag_30Rnd_556x45_M855A1_Stanag_Pull",30],[],""],[],["rhsusf_weap_m9","","","",["rhsusf_mag_15Rnd_9x19_FMJ",15],[],""],["rhs_uniform_FROG01_d",[["ACE_elasticBandage",12],["ACE_packingBandage",12],["ACE_EarPlugs",2],["ACE_epinephrine",3],["ACE_morphine",3],["ACE_splint",4]]],["rhsusf_spc_rifleman",[["rhs_mag_30Rnd_556x45_M855A1_Stanag_Pull",10,30],["rhs_mag_an_m8hc",5,1]]],["rhsusf_assault_eagleaiii_coy",[]],"rhsusf_lwh_helmet_marpatd_headset","rhsusf_shemagh2_gogg_tan",["Binocular","","","",[],[],""],["ItemMap","","TFAR_anprc152","ItemCompass","ACE_Altimeter","rhsusf_ANPVS_15"]]
+	] call ace_arsenal_fnc_addDefaultLoadout;
+	
+    [
+	"USMC Desert Anti Tank Specialist",
+	[["rhs_weap_m4","rhsusf_acc_SFMB556","","rhsusf_acc_eotech_552",["rhs_mag_30Rnd_556x45_M855A1_Stanag_Pull",30],[],""],["rhs_weap_smaw_green","","","rhs_weap_optic_smaw",["rhs_mag_smaw_HEAA",1],[],""],["rhsusf_weap_m9","","","",["rhsusf_mag_15Rnd_9x19_FMJ",15],[],""],["rhs_uniform_FROG01_d",[["ACE_elasticBandage",12],["ACE_packingBandage",12],["ACE_EarPlugs",2],["ACE_epinephrine",3],["ACE_morphine",3],["ACE_splint",4]]],["rhsusf_spc_rifleman",[["rhs_mag_30Rnd_556x45_M855A1_Stanag_Pull",8,30],["rhs_mag_an_m8hc",5,1]]],["rhsusf_assault_eagleaiii_coy",[["rhs_mag_smaw_HEAA",1,1]]],"rhsusf_lwh_helmet_marpatd_headset","rhsusf_shemagh2_gogg_grn",["ACE_Vector","","","",[],[],""],["ItemMap","","TFAR_anprc152","ItemCompass","ACE_Altimeter","rhsusf_ANPVS_15"]]
+	] call ace_arsenal_fnc_addDefaultLoadout;
+	
+    [
+	"USMC Desert Light Machinegunner",
+	[["rhs_weap_m249_pip","rhsusf_acc_SFMB556","","rhsusf_acc_eotech_552",["rhsusf_200Rnd_556x45_mixed_soft_pouch",200],[],"rhsusf_acc_saw_bipod"],[],["rhsusf_weap_m9","","","",["rhsusf_mag_15Rnd_9x19_FMJ",15],[],""],["rhs_uniform_FROG01_d",[["ACE_elasticBandage",12],["ACE_packingBandage",12],["ACE_EarPlugs",2],["ACE_epinephrine",3],["ACE_morphine",3],["ACE_splint",4]]],["rhsusf_spc_mg",[["rhs_mag_an_m8hc",2,1],["rhsusf_200Rnd_556x45_mixed_soft_pouch",2,200]]],["rhsusf_assault_eagleaiii_coy",[["rhsusf_200Rnd_556x45_mixed_soft_pouch",3,200]]],"rhsusf_lwh_helmet_marpatd_headset","rhsusf_shemagh2_gogg_tan",["Binocular","","","",[],[],""],["ItemMap","","TFAR_anprc152","ItemCompass","ACE_Altimeter","rhsusf_ANPVS_15"]]
+	] call ace_arsenal_fnc_addDefaultLoadout;
+	
+    [
+	"USMC Desert LMG Assistant",
+	[["rhs_weap_m4","rhsusf_acc_SFMB556","","rhsusf_acc_eotech_552",["rhs_mag_30Rnd_556x45_M855A1_Stanag_Pull",30],[],""],[],["rhsusf_weap_m9","","","",["rhsusf_mag_15Rnd_9x19_FMJ",15],[],""],["rhs_uniform_FROG01_d",[["ACE_elasticBandage",12],["ACE_packingBandage",12],["ACE_EarPlugs",2],["ACE_epinephrine",3],["ACE_morphine",3],["ACE_splint",4]]],["rhsusf_spc_rifleman",[["rhs_mag_30Rnd_556x45_M855A1_Stanag_Pull",10,30],["rhs_mag_an_m8hc",5,1]]],["rhsusf_assault_eagleaiii_coy",[["rhsusf_200Rnd_556x45_mixed_soft_pouch",3,200]]],"rhsusf_lwh_helmet_marpatd_headset","rhsusf_shemagh2_gogg_tan",["Binocular","","","",[],[],""],["ItemMap","","TFAR_anprc152","ItemCompass","ACE_Altimeter","rhsusf_ANPVS_15"]]
+	] call ace_arsenal_fnc_addDefaultLoadout;
+	
+    [
+	"USMC Desert Grenadier",
+	[["rhs_weap_m4_carryhandle_m203","rhsusf_acc_SFMB556","","rhsusf_acc_eotech_552",["rhs_mag_30Rnd_556x45_M855A1_Stanag_Pull",30],[],""],[],["rhsusf_weap_m9","","","",["rhsusf_mag_15Rnd_9x19_FMJ",15],[],""],["rhs_uniform_FROG01_d",[["ACE_elasticBandage",12],["ACE_packingBandage",12],["ACE_EarPlugs",2],["ACE_epinephrine",3],["ACE_morphine",3],["ACE_splint",4]]],["rhsusf_spc_squadleader",[["rhs_mag_30Rnd_556x45_M855A1_Stanag_Pull",8,30],["rhs_mag_an_m8hc",5,1],["rhs_mag_M433_HEDP",4,1]]],["rhsusf_assault_eagleaiii_coy",[["rhs_mag_M433_HEDP",15,1],["rhs_mag_m713_Red",3,1],["rhs_mag_m714_White",2,1],["rhs_mag_m661_green",2,1],["rhs_mag_m662_red",2,1]]],"rhsusf_lwh_helmet_marpatd_headset","rhsusf_shemagh2_gogg_tan",["Binocular","","","",[],[],""],["ItemMap","","TFAR_anprc152","ItemCompass","ACE_Altimeter","rhsusf_ANPVS_15"]]
+	] call ace_arsenal_fnc_addDefaultLoadout;
+	
+    [
+	"USMC Desert Designated Marksman",
+	[["rhs_weap_SCARH_LB","","","ACE_optic_SOS_2D",["rhs_mag_20Rnd_SCAR_762x51_m80a1_epr_bk",20],[],""],[],["rhsusf_weap_m9","","","",["rhsusf_mag_15Rnd_9x19_FMJ",15],[],""],["rhs_uniform_FROG01_d",[["ACE_elasticBandage",12],["ACE_packingBandage",12],["ACE_EarPlugs",2],["ACE_epinephrine",3],["ACE_morphine",3],["ACE_splint",4]]],["rhsusf_spc_marksman",[["rhs_mag_20Rnd_SCAR_762x51_m80a1_epr_bk",4,20],["rhs_mag_an_m8hc",1,1]]],["rhsusf_assault_eagleaiii_coy",[["rhs_mag_20Rnd_SCAR_762x51_m80a1_epr_bk",6,20]]],"rhsusf_lwh_helmet_marpatd_headset","rhsusf_shemagh2_gogg_tan",["Binocular","","","",[],[],""],["ItemMap","","TFAR_anprc152","ItemCompass","ACE_Altimeter","rhsusf_ANPVS_15"]]
+	] call ace_arsenal_fnc_addDefaultLoadout;
+	
+    [
+	"USMC Desert Team/Squad Lead",
+	[["rhs_weap_m4a1_carryhandle_m203S","rhsusf_acc_SFMB556","","rhsusf_acc_eotech_552",["rhs_mag_30Rnd_556x45_M855A1_Stanag_Pull",30],["rhs_mag_M433_HEDP",1],""],[],["rhsusf_weap_m9","","","",["rhsusf_mag_15Rnd_9x19_FMJ",15],[],""],["rhs_uniform_FROG01_d",[["ACE_elasticBandage",12],["ACE_packingBandage",12],["ACE_EarPlugs",2],["ACE_epinephrine",3],["ACE_morphine",3],["ACE_splint",4]]],["rhsusf_spc_squadleader",[["rhs_mag_30Rnd_556x45_M855A1_Stanag_Pull",8,30],["rhs_mag_an_m8hc",5,1],["rhs_mag_M433_HEDP",4,1]]],["TFAR_anprc155_coyote",[["rhs_mag_M433_HEDP",15,1],["rhs_mag_m713_Red",3,1],["rhs_mag_m714_White",2,1],["rhs_mag_m661_green",2,1],["rhs_mag_m662_red",2,1]]],"rhsusf_lwh_helmet_marpatd_headset","rhsusf_shemagh2_gogg_tan",["Binocular","","","",[],[],""],["ItemMap","ItemGPS","TFAR_anprc152","ItemCompass","ACE_Altimeter","rhsusf_ANPVS_15"]]
+	] call ace_arsenal_fnc_addDefaultLoadout;
+	
+    [
+	"USMC Desert Combat Medic",
+	[["rhs_weap_m4","rhsusf_acc_SFMB556","","rhsusf_acc_eotech_552",["rhs_mag_30Rnd_556x45_M855A1_Stanag_Pull",30],[],""],[],["rhsusf_weap_m9","","","",["rhsusf_mag_15Rnd_9x19_FMJ",15],[],""],["rhs_uniform_FROG01_d",[["ACE_elasticBandage",12],["ACE_packingBandage",12],["ACE_EarPlugs",2],["ACE_epinephrine",3],["ACE_morphine",3],["ACE_splint",4]]],["rhsusf_spc_corpsman",[["rhs_mag_30Rnd_556x45_M855A1_Stanag_Pull",8,30],["rhs_mag_an_m8hc",5,1]]],["B_Kitbag_cbr",[["ACE_packingBandage",65],["ACE_elasticBandage",65],["ACE_epinephrine",15],["ACE_morphine",15],["ACE_splint",20],["ACE_surgicalKit",1],["ACE_personalAidKit",1],["ACE_salineIV_500",5],["ACE_salineIV_250",5]]],"rhsusf_lwh_helmet_marpatd_headset","rhsusf_shemagh2_gogg_tan",["Binocular","","","",[],[],""],["ItemMap","","TFAR_anprc152","ItemCompass","ACE_Altimeter","rhsusf_ANPVS_15"]]
+	] call ace_arsenal_fnc_addDefaultLoadout;
+	
+    [
+	"USMC Desert Medium Machinegunner",
+	[["rhs_weap_m240B","","","rhsusf_acc_eotech_552",["rhsusf_100Rnd_762x51_m80a1epr",100],[],""],[],["rhsusf_weap_m9","","","",["rhsusf_mag_15Rnd_9x19_FMJ",15],[],""],["rhs_uniform_FROG01_d",[["ACE_elasticBandage",12],["ACE_packingBandage",12],["ACE_EarPlugs",2],["ACE_epinephrine",3],["ACE_morphine",3],["ACE_splint",4]]],["rhsusf_spc_mg",[["rhs_mag_an_m8hc",2,1],["rhsusf_100Rnd_762x51_m80a1epr",3,100]]],["rhsusf_assault_eagleaiii_coy",[["rhsusf_100Rnd_762x51_m80a1epr",4,100]]],"rhsusf_lwh_helmet_marpatd_headset","rhsusf_shemagh2_gogg_tan",["Binocular","","","",[],[],""],["ItemMap","","TFAR_anprc152","ItemCompass","ACE_Altimeter","rhsusf_ANPVS_15"]]
+	] call ace_arsenal_fnc_addDefaultLoadout;
+	
+    [
+	"USMC Desert MMG Assistant",
+	[["rhs_weap_m4","rhsusf_acc_SFMB556","","rhsusf_acc_eotech_552",["rhs_mag_30Rnd_556x45_M855A1_Stanag_Pull",30],[],""],[],["rhsusf_weap_m9","","","",["rhsusf_mag_15Rnd_9x19_FMJ",15],[],""],["rhs_uniform_FROG01_d",[["ACE_elasticBandage",12],["ACE_packingBandage",12],["ACE_EarPlugs",2],["ACE_epinephrine",3],["ACE_morphine",3],["ACE_splint",4]]],["rhsusf_spc_rifleman",[["rhs_mag_30Rnd_556x45_M855A1_Stanag_Pull",10,30],["rhs_mag_an_m8hc",5,1]]],["rhsusf_assault_eagleaiii_coy",[["rhsusf_100Rnd_762x51_m80a1epr",4,100]]],"rhsusf_lwh_helmet_marpatd_headset","rhsusf_shemagh2_gogg_tan",["Binocular","","","",[],[],""],["ItemMap","","TFAR_anprc152","ItemCompass","ACE_Altimeter","rhsusf_ANPVS_15"]]
+	] call ace_arsenal_fnc_addDefaultLoadout;
+	
+    [
+	"USMC Desert Crew",
+	[["rhs_weap_m4","rhsusf_acc_SFMB556","","rhsusf_acc_eotech_552",["rhs_mag_30Rnd_556x45_M855A1_Stanag_Pull",30],[],""],[],["rhsusf_weap_m9","","","",["rhsusf_mag_15Rnd_9x19_FMJ",15],[],""],["rhs_uniform_FROG01_d",[["ACE_elasticBandage",12],["ACE_packingBandage",12],["ACE_EarPlugs",2],["ACE_epinephrine",3],["ACE_morphine",3],["ACE_splint",4]]],["rhsusf_spc",[["rhs_mag_30Rnd_556x45_M855A1_Stanag_Pull",2,30]]],[],"rhsusf_cvc_ess","rhsusf_shemagh_tan",["Binocular","","","",[],[],""],["ItemMap","","TFAR_anprc152","ItemCompass","ACE_Altimeter",""]]
+	] call ace_arsenal_fnc_addDefaultLoadout;
+    [
+	"USMC Woodland Rifleman",
+	[["rhs_weap_m4","rhsusf_acc_SFMB556","","rhsusf_acc_eotech_552",["rhs_mag_30Rnd_556x45_M855A1_Stanag_Pull",30],[],""],[],["rhsusf_weap_m9","","","",["rhsusf_mag_15Rnd_9x19_FMJ",15],[],""],["rhs_uniform_FROG01_wd",[["ACE_elasticBandage",12],["ACE_packingBandage",12],["ACE_EarPlugs",2],["ACE_epinephrine",3],["ACE_morphine",3],["ACE_splint",4]]],["rhsusf_spc_rifleman",[["rhs_mag_30Rnd_556x45_M855A1_Stanag_Pull",10,30],["rhs_mag_an_m8hc",5,1]]],["rhsusf_assault_eagleaiii_coy",[]],"rhsusf_lwh_helmet_marpatwd_headset_blk","rhsusf_shemagh2_gogg_grn",["Binocular","","","",[],[],""],["ItemMap","","TFAR_anprc152","ItemCompass","ACE_Altimeter","rhsusf_ANPVS_15"]]
+	] call ace_arsenal_fnc_addDefaultLoadout;
+	
+    [
+	"USMC Woodland Anti Tank Specialist",
+	[["rhs_weap_m4","rhsusf_acc_SFMB556","","rhsusf_acc_eotech_552",["rhs_mag_30Rnd_556x45_M855A1_Stanag_Pull",30],[],""],["rhs_weap_smaw_green","","","rhs_weap_optic_smaw",["rhs_mag_smaw_HEAA",1],[],""],["rhsusf_weap_m9","","","",["rhsusf_mag_15Rnd_9x19_FMJ",15],[],""],["rhs_uniform_FROG01_wd",[["ACE_elasticBandage",12],["ACE_packingBandage",12],["ACE_EarPlugs",2],["ACE_epinephrine",3],["ACE_morphine",3],["ACE_splint",4]]],["rhsusf_spc_rifleman",[["rhs_mag_30Rnd_556x45_M855A1_Stanag_Pull",8,30],["rhs_mag_an_m8hc",5,1]]],["rhsusf_assault_eagleaiii_coy",[["rhs_mag_smaw_HEAA",1,1]]],"rhsusf_lwh_helmet_marpatwd_headset_blk","rhsusf_shemagh2_gogg_grn",["Binocular","","","",[],[],""],["ItemMap","","TFAR_anprc152","ItemCompass","ACE_Altimeter","rhsusf_ANPVS_15"]]
+	] call ace_arsenal_fnc_addDefaultLoadout;
+	
+    [
+	"USMC Woodland Light Machinegunner",
+	[["rhs_weap_m249_pip","rhsusf_acc_SFMB556","","rhsusf_acc_eotech_552",["rhsusf_200Rnd_556x45_mixed_soft_pouch",200],[],"rhsusf_acc_saw_bipod"],[],["rhsusf_weap_m9","","","",["rhsusf_mag_15Rnd_9x19_FMJ",15],[],""],["rhs_uniform_FROG01_wd",[["ACE_elasticBandage",12],["ACE_packingBandage",12],["ACE_EarPlugs",2],["ACE_epinephrine",3],["ACE_morphine",3],["ACE_splint",4]]],["rhsusf_spc_mg",[["rhs_mag_an_m8hc",2,1],["rhsusf_200Rnd_556x45_mixed_soft_pouch",2,200]]],["rhsusf_assault_eagleaiii_coy",[["rhsusf_200Rnd_556x45_mixed_soft_pouch",3,200]]],"rhsusf_lwh_helmet_marpatwd_headset_blk","rhsusf_shemagh2_gogg_grn",["Binocular","","","",[],[],""],["ItemMap","","TFAR_anprc152","ItemCompass","ACE_Altimeter","rhsusf_ANPVS_15"]]
+	] call ace_arsenal_fnc_addDefaultLoadout;
+	
+    [
+	"USMC Woodland LMG Assistant",
+	[["rhs_weap_m4","rhsusf_acc_SFMB556","","rhsusf_acc_eotech_552",["rhs_mag_30Rnd_556x45_M855A1_Stanag_Pull",30],[],""],[],["rhsusf_weap_m9","","","",["rhsusf_mag_15Rnd_9x19_FMJ",15],[],""],["rhs_uniform_FROG01_wd",[["ACE_elasticBandage",12],["ACE_packingBandage",12],["ACE_EarPlugs",2],["ACE_epinephrine",3],["ACE_morphine",3],["ACE_splint",4]]],["rhsusf_spc_rifleman",[["rhs_mag_30Rnd_556x45_M855A1_Stanag_Pull",10,30],["rhs_mag_an_m8hc",5,1]]],["rhsusf_assault_eagleaiii_coy",[["rhsusf_200Rnd_556x45_mixed_soft_pouch",3,200]]],"rhsusf_lwh_helmet_marpatwd_headset_blk","rhsusf_shemagh2_gogg_grn",["Binocular","","","",[],[],""],["ItemMap","","TFAR_anprc152","ItemCompass","ACE_Altimeter","rhsusf_ANPVS_15"]]
+	] call ace_arsenal_fnc_addDefaultLoadout;
+	
+    [
+	"USMC Woodland Grenadier",
+	[["rhs_weap_m4_carryhandle_m203","rhsusf_acc_SFMB556","","rhsusf_acc_eotech_552",["rhs_mag_30Rnd_556x45_M855A1_Stanag_Pull",30],[],""],[],["rhsusf_weap_m9","","","",["rhsusf_mag_15Rnd_9x19_FMJ",15],[],""],["rhs_uniform_FROG01_wd",[["ACE_elasticBandage",12],["ACE_packingBandage",12],["ACE_EarPlugs",2],["ACE_epinephrine",3],["ACE_morphine",3],["ACE_splint",4]]],["rhsusf_spc_squadleader",[["rhs_mag_30Rnd_556x45_M855A1_Stanag_Pull",8,30],["rhs_mag_an_m8hc",5,1],["rhs_mag_M433_HEDP",4,1]]],["rhsusf_assault_eagleaiii_coy",[["rhs_mag_M433_HEDP",15,1],["rhs_mag_m713_Red",3,1],["rhs_mag_m714_White",2,1],["rhs_mag_m661_green",2,1],["rhs_mag_m662_red",2,1]]],"rhsusf_lwh_helmet_marpatwd_headset_blk","rhsusf_shemagh2_gogg_grn",["Binocular","","","",[],[],""],["ItemMap","","TFAR_anprc152","ItemCompass","ACE_Altimeter","rhsusf_ANPVS_15"]]
+	] call ace_arsenal_fnc_addDefaultLoadout;
+	
+    [
+	"USMC Woodland Designated Marksman",
+	[["rhs_weap_SCARH_LB","","","ACE_optic_SOS_2D",["rhs_mag_20Rnd_SCAR_762x51_m80a1_epr_bk",20],[],""],[],["rhsusf_weap_m9","","","",["rhsusf_mag_15Rnd_9x19_FMJ",15],[],""],["rhs_uniform_FROG01_wd",[["ACE_elasticBandage",12],["ACE_packingBandage",12],["ACE_EarPlugs",2],["ACE_epinephrine",3],["ACE_morphine",3],["ACE_splint",4]]],["rhsusf_spc_marksman",[["rhs_mag_20Rnd_SCAR_762x51_m80a1_epr_bk",4,20],["rhs_mag_an_m8hc",1,1]]],["rhsusf_assault_eagleaiii_coy",[["rhs_mag_20Rnd_SCAR_762x51_m80a1_epr_bk",6,20]]],"rhsusf_lwh_helmet_marpatwd_headset_blk","rhsusf_shemagh2_gogg_grn",["Binocular","","","",[],[],""],["ItemMap","","TFAR_anprc152","ItemCompass","ACE_Altimeter","rhsusf_ANPVS_15"]]
+	] call ace_arsenal_fnc_addDefaultLoadout;
+	
+    [
+	"USMC Woodland Team/Squad Lead",
+	[["rhs_weap_m4a1_carryhandle_m203S","rhsusf_acc_SFMB556","","rhsusf_acc_eotech_552",["rhs_mag_30Rnd_556x45_M855A1_Stanag_Pull",30],["rhs_mag_M433_HEDP",1],""],[],["rhsusf_weap_m9","","","",["rhsusf_mag_15Rnd_9x19_FMJ",15],[],""],["rhs_uniform_FROG01_wd",[["ACE_elasticBandage",12],["ACE_packingBandage",12],["ACE_EarPlugs",2],["ACE_epinephrine",3],["ACE_morphine",3],["ACE_splint",4]]],["rhsusf_spc_squadleader",[["rhs_mag_30Rnd_556x45_M855A1_Stanag_Pull",8,30],["rhs_mag_an_m8hc",5,1],["rhs_mag_M433_HEDP",4,1]]],["TFAR_anprc155_coyote",[["rhs_mag_M433_HEDP",15,1],["rhs_mag_m713_Red",3,1],["rhs_mag_m714_White",2,1],["rhs_mag_m661_green",2,1],["rhs_mag_m662_red",2,1]]],"rhsusf_lwh_helmet_marpatwd_headset_blk","rhsusf_shemagh2_gogg_grn",["Binocular","","","",[],[],""],["ItemMap","ItemGPS","TFAR_anprc152","ItemCompass","ACE_Altimeter","rhsusf_ANPVS_15"]]
+	] call ace_arsenal_fnc_addDefaultLoadout;
+	
+    [
+	"USMC Woodland Combat Medic",
+	[["rhs_weap_m4","rhsusf_acc_SFMB556","","rhsusf_acc_eotech_552",["rhs_mag_30Rnd_556x45_M855A1_Stanag_Pull",30],[],""],[],["rhsusf_weap_m9","","","",["rhsusf_mag_15Rnd_9x19_FMJ",15],[],""],["rhs_uniform_FROG01_wd",[["ACE_elasticBandage",12],["ACE_packingBandage",12],["ACE_EarPlugs",2],["ACE_epinephrine",3],["ACE_morphine",3],["ACE_splint",4]]],["rhsusf_spc_corpsman",[["rhs_mag_30Rnd_556x45_M855A1_Stanag_Pull",8,30],["rhs_mag_an_m8hc",5,1]]],["B_Kitbag_cbr",[["ACE_packingBandage",65],["ACE_elasticBandage",65],["ACE_epinephrine",15],["ACE_morphine",15],["ACE_splint",20],["ACE_surgicalKit",1],["ACE_personalAidKit",1],["ACE_salineIV_500",5],["ACE_salineIV_250",5]]],"rhsusf_lwh_helmet_marpatwd_headset_blk","rhsusf_shemagh2_gogg_grn",["Binocular","","","",[],[],""],["ItemMap","","TFAR_anprc152","ItemCompass","ACE_Altimeter","rhsusf_ANPVS_15"]]
+	] call ace_arsenal_fnc_addDefaultLoadout;
+	
+    [
+	"USMC Woodland Medium Machinegunner",
+	[["rhs_weap_m240B","","","rhsusf_acc_eotech_552",["rhsusf_100Rnd_762x51_m80a1epr",100],[],""],[],["rhsusf_weap_m9","","","",["rhsusf_mag_15Rnd_9x19_FMJ",15],[],""],["rhs_uniform_FROG01_wd",[["ACE_elasticBandage",12],["ACE_packingBandage",12],["ACE_EarPlugs",2],["ACE_epinephrine",3],["ACE_morphine",3],["ACE_splint",4]]],["rhsusf_spc_mg",[["rhs_mag_an_m8hc",2,1],["rhsusf_100Rnd_762x51_m80a1epr",3,100]]],["rhsusf_assault_eagleaiii_coy",[["rhsusf_100Rnd_762x51_m80a1epr",4,100]]],"rhsusf_lwh_helmet_marpatwd_headset_blk","rhsusf_shemagh2_gogg_grn",["Binocular","","","",[],[],""],["ItemMap","","TFAR_anprc152","ItemCompass","ACE_Altimeter","rhsusf_ANPVS_15"]]
+	] call ace_arsenal_fnc_addDefaultLoadout;
+	
+    [
+	"USMC Woodland MMG Assistant",
+	[["rhs_weap_m4","rhsusf_acc_SFMB556","","rhsusf_acc_eotech_552",["rhs_mag_30Rnd_556x45_M855A1_Stanag_Pull",30],[],""],[],["rhsusf_weap_m9","","","",["rhsusf_mag_15Rnd_9x19_FMJ",15],[],""],["rhs_uniform_FROG01_wd",[["ACE_elasticBandage",12],["ACE_packingBandage",12],["ACE_EarPlugs",2],["ACE_epinephrine",3],["ACE_morphine",3],["ACE_splint",4]]],["rhsusf_spc_rifleman",[["rhs_mag_30Rnd_556x45_M855A1_Stanag_Pull",10,30],["rhs_mag_an_m8hc",5,1]]],["rhsusf_assault_eagleaiii_coy",[["rhsusf_100Rnd_762x51_m80a1epr",4,100]]],"rhsusf_lwh_helmet_marpatwd_headset_blk","rhsusf_shemagh2_gogg_grn",["Binocular","","","",[],[],""],["ItemMap","","TFAR_anprc152","ItemCompass","ACE_Altimeter","rhsusf_ANPVS_15"]]
+	] call ace_arsenal_fnc_addDefaultLoadout;
+	
+    [
+	"USMC Woodland Crew",
+	[["rhs_weap_m4","rhsusf_acc_SFMB556","","rhsusf_acc_eotech_552",["rhs_mag_30Rnd_556x45_M855A1_Stanag_Pull",30],[],""],[],["rhsusf_weap_m9","","","",["rhsusf_mag_15Rnd_9x19_FMJ",15],[],""],["rhs_uniform_FROG01_wd",[["ACE_elasticBandage",12],["ACE_packingBandage",12],["ACE_EarPlugs",2],["ACE_epinephrine",3],["ACE_morphine",3],["ACE_splint",4]]],["rhsusf_spc",[["rhs_mag_30Rnd_556x45_M855A1_Stanag_Pull",2,30]]],[],"rhsusf_cvc_green_ess","rhsusf_shemagh_grn",["Binocular","","","",[],[],""],["ItemMap","","TFAR_anprc152","ItemCompass","ACE_Altimeter",""]]
+	] call ace_arsenal_fnc_addDefaultLoadout;
 
 
 	
