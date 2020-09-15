@@ -82,7 +82,7 @@ if (isNil "ace_arsenal_fnc_addDefaultLoadout") then {
 
 if (isClass (configFile >> "CfgPatches" >> "bwa3_common")) then {
 
-    [
+	[
 	"BW IdZ Flecktarn AT Schuetze",
 	[["BWA3_G36A3","","","BWA3_optic_ZO4x30_RSAS",["BWA3_30Rnd_556x45_G36_AP",30],[],""],["launch_MRAWS_green_F","","","",["MRAWS_HEAT_F",1],[],""],["BWA3_P8","","","",["BWA3_15Rnd_9x19_P8",15],[],""],["BWA3_Uniform_Fleck",[["ACE_EarPlugs",2],["ACE_EntrenchingTool",1],["ACE_elasticBandage",10],["BWA3_15Rnd_9x19_P8",2,15]]],["BWA3_Vest_Rifleman_Fleck",[["ACE_epinephrine",2],["ACE_morphine",2],["ACE_packingBandage",20],["ACE_splint",4],["ACE_tourniquet",2],["ACE_salineIV_250",1],["BWA3_DM25",4,1],["BWA3_DM51A1",1,1],["BWA3_DM32_Red",2,1],["BWA3_DM32_Blue",2,1],["BWA3_30Rnd_556x45_G36_AP",8,30]]],["BWA3_Kitbag_Fleck",[["ACE_epinephrine",5],["MRAWS_HEAT_F",3,1]]],"PBW_Helm1_fleck_H","PBW_RevisionF_klar",["ACE_Vector","","","",[],[],""],["ItemMap","ItemGPS","TFAR_anprc152","ItemCompass","ItemWatch",""]]
 	] call ace_arsenal_fnc_addDefaultLoadout;

@@ -6,7 +6,7 @@ class CfgPatches {
         weapons[] = {};
         requiredVersion = 1.0;
         author = "dedmen";
-        requiredAddons[] = {"cba_main","A3_Modules_F_Curator","ace_medical_blood","ace_cargo"};
+        requiredAddons[] = {"cba_main","A3_Modules_F_Curator","ace_medical_blood","ace_cargo", "A3_Functions_F"};
     };
 };
 EnableTargetDebug = 1;
@@ -120,6 +120,20 @@ class CfgFunctions {
             };
         };
     };
+
+
+
+	class A3 {
+		class Debug {
+			file = "A3\functions_f\Debug";
+			class isDebugConsoleAllowed{
+				file = QPATHTOF(functions\fn_isDebugConsoleAllowed.sqf)	
+			};
+			class debugConsoleExec{};
+		};
+	};
+
+
 };
 /*
 class CfgRemoteExec {
