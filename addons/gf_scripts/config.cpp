@@ -84,6 +84,7 @@ class CfgFunctions {
             class performanceMode;
             class screenShotMode;
             class initTeleporter;
+            class swapBrains;
         };
         class showImage {
             file = QPATHTOF(functions\showImage);
