@@ -3,6 +3,26 @@ Arguments
 0: The text thats disabled on-screen during blackout phase
 1: A script that runs in the middle of the swap, parameters [_oldUnit, _newUnit]
 2: Extra wait time in seconds, during the middle full blackscreen phase
+
+Example:
+
+[
+    "<t color='#ff0000' size='5'>RED ALERT!</t><br/>***********",
+    {
+        params ["_oldUnit", "_newUnit"];
+        [_oldUnit] call ace_medical_treatment_fnc_fullHealLocal;
+        setDate [2035, 6, 24, 4, 00];
+    },
+    15
+] call gf_fnc_swapBrains;
+
+
+your units in the game need to have variable names that start with p_ or sp_
+
+so that p_1 and sp_1 are the two units that will be switched.
+Next player would get p_2 and sp_2 and so on.
+There always needs to be the same number of p_ units as sp_ units
+
 */
 // Variablennamen der einheiten sind prefix_zahl 
 // Hier stehen die möglichen prefixe, einfach austauschen gegen die in der mission verwendeten
@@ -18,7 +38,6 @@ if (!isServer) exitWith {};
 private _prefixes = [prefix1, prefix2];
 
 {
-
     private _oldUnit = _x;
     private _currentVariable = vehicleVarName _oldUnit;
 
@@ -26,7 +45,6 @@ private _prefixes = [prefix1, prefix2];
     if ((_currentVariable select [0, count prefix1] != prefix1) && (_currentVariable select [0, count prefix2] != prefix2)) then { 
         continue;
     };
-
 
     (_currentVariable splitString "_") params ["_type", "_number"];
 
@@ -38,7 +56,7 @@ private _prefixes = [prefix1, prefix2];
     [[_oldUnit,_newUnit, _text, _midScript, _extraWait], {
         params ["_oldUnit", "_newUnit", "_text", "_midScript", "_extraWait"];
 
-        titleText [_text, "Black out", 2, true, "<img" in _text];
+        titleText [_text, "Black out", 2, true, "<" in _text && ">" in _text];
         2 fadeSound 0;
         sleep 2;
 
