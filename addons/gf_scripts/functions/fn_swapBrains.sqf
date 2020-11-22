@@ -72,8 +72,6 @@ private _prefixes = [prefix1, prefix2];
 
             private _oldRadios = _oldUnit call TFAR_fnc_radiosList;
             if !(_oldRadios isEqualTo []) then {
-
-
                 // remove all radios new unit has
                 {
                     _newUnit removeItem _x; 
@@ -83,6 +81,11 @@ private _prefixes = [prefix1, prefix2];
                 _newUnit linkItem (_oldRadios select 0);
             };
         };
+
+        // Stop old unit ACE Medical handling
+        _oldUnit setVariable ["ace_medical_vitals_lastTimeUpdated", 9e7];
+        // Activate new unit ACE Medical handling
+        _newUnit setVariable ["ace_medical_vitals_lastTimeUpdated", CBA_missionTime];
 
         [_oldUnit, false] remoteExec ["enableSimulation", 0];
         _oldUnit allowDamage false;
