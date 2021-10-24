@@ -27,7 +27,7 @@ class Extended_PostInit_EventHandlers {
 class Extended_Init_EventHandlers {
     class UGV_01_base_F {
         class gf_scripts_stomperSlingloadableMass {
-            init = "_this setMass 2900";
+            init = "(_this select 0) setMass 2900";
         };
     };
 };
