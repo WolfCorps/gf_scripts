@@ -7,9 +7,6 @@
 ["76561198052867957"] call GF_fnc_startMarkerLog; //kirito
 [false,"76561198052867957"] call GF_fnc_logHandcuffs;
 
-["76561198100544071"] call GF_fnc_startMarkerLog; //kralle
-[false,"76561198100544071"] call GF_fnc_logHandcuffs;
-
 
 if (isNil "GF_Teleporters") then {
 	GF_Teleporters = [];
