@@ -8,6 +8,15 @@ waitUntil {
     !isNull findDisplay _this
 };
 
+
+// marker deleted EH doesn't have deleter user
+//addMissionEventHandler ["MarkerDeleted", {
+//
+//
+// [format ["Marker %1 by %2 - %3", GF_MarkerLog_PVEH select 0, GF_MarkerLog_PVEH select 1, (GF_MarkerLog_PVEH select 3) select 1]   ,GF_MarkerLogTargets] call GF_fnc_outputToSystemChat;
+//
+//}];
+
 findDisplay _this displayAddEventHandler [
     "KeyDown", {
         params ["_ctrl", "_dikCode", "_shift", "_ctrlKey", "_alt"];
