@@ -604,4 +604,25 @@ call gf_scripts_fnc_initQuadCargo;
 }] call CBA_fnc_addEventHandler;
 
 
+//automatic unloading of players when vehicle is killed ------------
+ark_ace_medical_fnc_vehKilled = {
+    params ["_veh"];
+
+    if (isNull _veh || { !(_veh isKindOf "AllVehicles") } ) exitWith {};
+
+    private _crew = crew _veh;
+
+	//handle AI
+	{
+		["ace_fire_burn", [_x, (3 + random 1)]] call CBA_fnc_globalEvent
+	} forEach (_crew select {!isPlayer _x});
+
+	//handle players
+	{
+		[_x] call ace_common_fnc_unloadPerson
+	} forEach (_crew select {isPlayer _x});
+};
+
+addMissionEventHandler ["EntityKilled",{call ark_ace_medical_fnc_vehKilled}];
+//---------------------------------------------------------------------
 
