@@ -91,7 +91,7 @@ GF_FFEvent = ["ace_unconscious", {
         if (isServer) then {
             diag_log ["####### Spieler %1 wurde von %2 bewusstlos geschossen", name _unit, name _lastDamageSource];
         };
-        if ((isNull getAssignedCuratorLogic player) && call BIS_fnc_admin == 0 && {!(getPlayerUID player in ["76561198049878030", "76561198052867957", "76561198133767870"])}) exitWith {"not zeus,admin,dedmen,kirito,eichenlaub"};
+        if ((isNull getAssignedCuratorLogic player) && call BIS_fnc_admin == 0 && {!(getPlayerUID player in ["76561198049878030", "76561198052867957", "76561198133767870", "76561198134196815", "76561198042391503", "76561198004883724"])}) exitWith {"not zeus,admin,dedmen,kirito,eichenlaub,max,alex,snoow"};
         systemChat format ["Spieler %1 wurde von %2 bewusstlos geschossen", name _unit, name _lastDamageSource];    
     }] remoteExec ["call", 0];
 }] call CBA_fnc_addEventHandler;
