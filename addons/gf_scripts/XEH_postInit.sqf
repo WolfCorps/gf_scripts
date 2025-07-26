@@ -613,9 +613,9 @@ ark_ace_medical_fnc_vehKilled = {
     private _crew = crew _veh;
 
 	//handle AI
-	{
-		["ace_fire_burn", [_x, (3 + random 1)]] call CBA_fnc_globalEvent
-	} forEach (_crew select {!isPlayer _x});
+	//{
+	//	["ace_fire_burn", [_x, (3 + random 1)]] call CBA_fnc_globalEvent
+	//} forEach (_crew select {!isPlayer _x});
 
 	//handle players
 	{
